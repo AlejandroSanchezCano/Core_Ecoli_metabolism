@@ -4,9 +4,10 @@ Use ODE to study a simplified version of the core metabolism of E.coli
 
 Metabolic networks are highly complex, so we require methods to mathematically simplify the system to understand its dynamics. Himeoka and Mitarai (doi: 10.1101/2021.07.21.453212) have explored an automated method to reduce a full set of ODEs to a core model that explains different stages of E. coli growth. This reduced model is written as
 d[pep]dt=ϕ([glc]-[pep]+[pyr]+r[oaa])-(1+d)[pep]
+\n
 
 d[pyr]dt=ϕ([pep]-[pyr]r[oaa])-d[pyr]
-
+\n
 d[oaa]dt=[pep]-ϕ[oaa]
 \n
 where [glc] = input glucose, [pep] = phosphoenolpyruvate, [pyr] = pyruvate, and [oaa] = oxaloacetate. The parameter d reflects degradation of compounds, r is related to growth/dilution effects on the concentrations of [pep] and [pyr] in the simplified model. Finally, \phi=\max\funcapply{1-\left[pyr\right],\phi_0} reflects the concentration of ATP and ADP in the cell.
